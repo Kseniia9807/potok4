@@ -63,41 +63,7 @@ playButton.addEventListener('click', function(){
     playSecond(0);
 });
 
-//function playSecond(currentSecond){
-    
-    //for(let i=0; i<8; i++){
-        //if(!all_buttons[i][currentSecond].classList.contains("snd")){
-            //beatmap[i][currentSecond].play();
-            //all_buttons[i][currentSecond].style.backgroundColor = 'red';
-            //beatmap[i][currentSecond].onended = function (){
-               // playSecond((currentSecond+1)%9);
-            //}
-        //}
-   // }
-    
-//}
-//function playSecond(currentSecond) {
-    ////for (let i = 0; i < 8; i++) {
-
-        //if (!all_buttons[i][currentSecond].classList.contains("snd")) {
-           // beatmap[i][currentSecond].muted = false; 
-           // beatmap[i][currentSecond].play();
-            
-            //all_buttons[i][currentSecond].style.backgroundColor = 'red'; 
-        //} else {
-           // beatmap[i][currentSecond].muted = true;  
-              
-           // all_buttons[i][currentSecond].style.backgroundColor = 'white';
-        //}
-   // }
-
-    ////beatmap[i][currentSecond].onended = function () {
-        //playSecond((currentSecond + 1) % 9);
-    //};
-//}  
 function playSecond(currentSecond) {
-    let playedSound = false; // Флаг, указывающий, воспроизводился ли звук на этой секунде
-
     for (let i = 0; i < 8; i++) {
         const button = all_buttons[i][currentSecond];
         const sound = beatmap[i][currentSecond];
@@ -106,27 +72,30 @@ function playSecond(currentSecond) {
             sound.muted = false;
             sound.play();
             button.style.backgroundColor = 'red';
-            playedSound = true; // Отмечаем, что звук воспроизведен.
+
+            // Устанавливаем обработчик onended только для воспроизведенных звуков
+            sound.onended = function() {
+                button.style.backgroundColor = ''; // Возвращаем исходный цвет после окончания звука
+            };
         } else {
             sound.muted = true;
             button.style.backgroundColor = ''; // Или другой цвет для выключенного звука
         }
     }
-
-
-    // Если ни один звук не был воспроизведен на этой секунде, переходим к следующей
-    if (!playedSound) {
-        setTimeout(() => { // Используйте setTimeout, чтобы не вызвать рекурсию сразу.
-          playSecond((currentSecond + 1) % 9);
-        }, 0); //Задержка 0 - выполнится, как только будет возможность
-    } else {
-        // В противном случае, переключаемся на следующую секунду после окончания первого звука в колонке
-        beatmap[0][currentSecond].onended = function () {
-            playSecond((currentSecond + 1) % 9);
-        };
-    }
-
 }
+
+
+playButton.addEventListener('click', function() {
+  // При клике на play, последовательно воспроизводим звуки для каждой секунды
+  for (let currentSecond = 0; currentSecond < 9; currentSecond++) {
+    setTimeout(() => {
+      playSecond(currentSecond);
+    }, currentSecond * 1000); // Задержка в 1 секунду * номер секунды. Предполагаем, что длительность каждой секунды - 1000мс.
+  }
+});
+
+
+
 
 
 
