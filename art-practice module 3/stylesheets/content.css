@@ -443,3 +443,9 @@ animation: gradient-animation2 1.5s ease infinite; /* Анимация */
     width: 23vw;
     height: 23vw;
 }
+.peogress{
+  width: 5vw;
+  height: 2vw;
+  margin-top: 1vw;
+  background-color: grey;
+}

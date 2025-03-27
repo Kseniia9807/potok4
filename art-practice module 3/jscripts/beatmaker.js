@@ -86,7 +86,7 @@ playButton.addEventListener('click', function(){
             //all_buttons[i][currentSecond].style.backgroundColor = 'red'; 
         //} else {
            // beatmap[i][currentSecond].muted = true;  
-            
+              
            // all_buttons[i][currentSecond].style.backgroundColor = 'white';
         //}
    // }
@@ -94,7 +94,7 @@ playButton.addEventListener('click', function(){
     ////beatmap[i][currentSecond].onended = function () {
         //playSecond((currentSecond + 1) % 9);
     //};
-//}
+//}  
 function playSecond(currentSecond) {
     let playedSound = false; // Флаг, указывающий, воспроизводился ли звук на этой секунде
 
