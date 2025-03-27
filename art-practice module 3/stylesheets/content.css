@@ -11,7 +11,7 @@ body{
     height:55vw;
     overflow: hidden;
     background-color: white;
-    
+    display: none;
     
 }
 .about{
