@@ -95,6 +95,10 @@ playButton.addEventListener('click', function() {
 });
 
 
+playButton.addEventListener('click', () =>{
+    alert("open")
+});
+
 
 
 

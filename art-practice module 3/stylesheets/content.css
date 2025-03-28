@@ -147,6 +147,7 @@ body{
     border-radius: 20px;
     margin-left: 84vw;
     margin-top: 4.5vw;
+    cursor: pointer;
 }
 #tones:hover{
     color:#2690FF;
@@ -427,7 +428,7 @@ animation: gradient-animation2 1.5s ease infinite; /* Анимация */
   border-radius: 15%;
   margin-left: 1vw;
   margin-top: 1.5vw;
-  
+  cursor: pointer;
 }
 .last{
   width: 2vw;
@@ -445,9 +446,55 @@ animation: gradient-animation2 1.5s ease infinite; /* Анимация */
     width: 23vw;
     height: 23vw;
 }
-.peogress{
-  width: 5vw;
-  height: 2vw;
+#progress{
+  width: 23vw;
+  height: 1vw;
+  margin-top: 2vw;
+  background-color: red;
+}
+.bar{
+  background-color: #A3A5A7;
+  overflow: hidden;
+}
+.fill{
+  height: 100%;
+  width: 1%;
+  background-color:#2690FF;
+}
+.text{
+  display: flex;
+  flex-direction: row;
+  font-family: Arial, Helvetica, sans-serif;
   margin-top: 1vw;
-  background-color: grey;
+}
+#num{
+  color:#2690FF;
+}
+#time{
+  margin-left: 20vw;
+}
+.playbtn{
+  width: 2vw;
+  height: 2vw;
+  
+}
+#tones2{
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2vw;
+  background-color: white;
+  border: 0.2vw black solid;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+  border-radius: 20px;
+  margin-left: 84vw;
+  margin-top: 4.5vw;
+  cursor: pointer;
+ 
+}
+#tones2:hover{
+  color:#2690FF;
+  border: 0.2vw #2690FF solid;
 }
