@@ -82,17 +82,35 @@ function playSecond(currentSecond) {
 
 
 playButton.addEventListener('click', function() {
-  // При клике на play, последовательно воспроизводим звуки для каждой секунды
+  // 
   for (let currentSecond = 0; currentSecond < 9; currentSecond++) {
     setTimeout(() => {
       playSecond(currentSecond);
-    }, currentSecond * 1000); // Задержка в 1 секунду * номер секунды. Предполагаем, что длительность каждой секунды - 1000мс.
+    }, currentSecond * 1000); // Задержка
   }
 });
 
-
-
-
+let button5 = document.getElementById("tones2")
+const img = document.querySelector(".playbtn");
+const progress = document.querySelector(".fill");
+play.addEventListener("click", () => {
+    console.log("press");
+    progress.style.animation = 'none';
+    void progress.offsetWidth;
+ progress.style.animation = "fill 9s linear";
+ img.src = "./img/pause.svg";
+    document.getElementById("play").disabled = true;
+    setTimeout(() => {
+        img.src = "./img/playbtn.svg"; 
+        document.getElementById("play").disabled = false;
+        progress.style.animation = 'none';
+    }, 9000); 
+});
+button5.addEventListener("click", () => {
+    progress.style.animation = 'none';
+    img.src = "./img/playbtn.svg";
+    
+})
 
 
 

@@ -450,7 +450,7 @@ animation: gradient-animation2 1.5s ease infinite; /* Анимация */
   width: 23vw;
   height: 1vw;
   margin-top: 2vw;
-  background-color: red;
+  background-color: #A3A5A7;
 }
 .bar{
   background-color: #A3A5A7;
@@ -458,8 +458,13 @@ animation: gradient-animation2 1.5s ease infinite; /* Анимация */
 }
 .fill{
   height: 100%;
-  width: 1%;
+  width: 0%;
   background-color:#2690FF;
+  
+}
+@keyframes fill {
+  0% {width: 0%}
+  100% {width: 100%}
 }
 .text{
   display: flex;
@@ -502,3 +507,15 @@ animation: gradient-animation2 1.5s ease infinite; /* Анимация */
   background-color: #2690FF;
 }
 
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  } 
+  
+}
