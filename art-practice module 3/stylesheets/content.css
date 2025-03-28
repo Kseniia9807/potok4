@@ -464,7 +464,7 @@ animation: gradient-animation2 1.5s ease infinite; /* Анимация */
 }
 @keyframes fill {
   0% {width: 0%}
-  100% {width: 100%}
+  100% {width: 120%}
 }
 .text{
   display: flex;
@@ -476,7 +476,7 @@ animation: gradient-animation2 1.5s ease infinite; /* Анимация */
   color:#2690FF;
 }
 #time{
-  margin-left: 20vw;
+  margin-left: 17.5vw;
 }
 .playbtn{
   width: 2vw;
@@ -506,7 +506,12 @@ animation: gradient-animation2 1.5s ease infinite; /* Анимация */
 .snd{
   background-color: #2690FF;
 }
-
+#play{
+  width:2vw;
+  background-color: white;
+  border: 1px solid #2690FF;
+  margin-left: 10vw;
+}
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
   html {
     transform: rotate(-90deg);

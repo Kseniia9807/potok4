@@ -74,7 +74,7 @@ function playSecond(currentSecond) {
             button.style.backgroundColor = '#0F83FB';
 
             sound.onended = function() {
-                button.style.backgroundColor = ''; // Возвращаем исходный цвет после окончания звука
+                button.style.backgroundColor = ''; 
             };
         } 
     }
@@ -86,7 +86,7 @@ playButton.addEventListener('click', function() {
   for (let currentSecond = 0; currentSecond < 9; currentSecond++) {
     setTimeout(() => {
       playSecond(currentSecond);
-    }, currentSecond * 1000); // Задержка
+    }, currentSecond * 1000); 
   }
 });
 
@@ -97,7 +97,7 @@ play.addEventListener("click", () => {
     console.log("press");
     progress.style.animation = 'none';
     void progress.offsetWidth;
- progress.style.animation = "fill 9s linear";
+ progress.style.animation = "fill 11s linear";
  img.src = "./img/pause.svg";
     document.getElementById("play").disabled = true;
     setTimeout(() => {
@@ -111,6 +111,27 @@ button5.addEventListener("click", () => {
     img.src = "./img/playbtn.svg";
     
 })
+let t = 0;
+let interval1;
+const time = document.getElementById("count");
+play.addEventListener("click", () => {
+    if (!interval1) {
+        interval1 = setInterval(() => {
+            t += 1;
+
+            
+            if (t >=10 ) {
+                clearInterval(interval1); 
+                interval1 = null; // 
+                t = 0; 
+            }
+
+            time.textContent = t;
+        }, ); 
+    }
+});
+
+
 
 
 
