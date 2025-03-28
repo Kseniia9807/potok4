@@ -50,6 +50,7 @@ for(let i=0; i<8; i++){
             console.log('clicked!');
             if (all_buttons[i][j].classList.contains("snd")) {
                 all_buttons[i][j].classList.remove("snd");
+                beatmap[i][j].play();
               } else {
                 all_buttons[i][j].classList.add("snd");
               }
@@ -111,23 +112,23 @@ button5.addEventListener("click", () => {
     img.src = "./img/playbtn.svg";
     
 })
-let t = 0;
+let timer = 0;
 let interval1;
 const time = document.getElementById("count");
 play.addEventListener("click", () => {
     if (!interval1) {
         interval1 = setInterval(() => {
-            t += 1;
+            timer += 1;
 
             
-            if (t >=10 ) {
+            if (timer >=10 ) {
                 clearInterval(interval1); 
                 interval1 = null; // 
-                t = 0; 
+                timer = 0; 
             }
 
-            time.textContent = t;
-        }, ); 
+            time.textContent = timer;
+        }, 1000); 
     }
 });
 

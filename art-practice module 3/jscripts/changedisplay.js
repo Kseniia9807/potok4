@@ -2,6 +2,8 @@ const button = document.getElementById("beats")
 const button2 = document.getElementById("beats2")
 const button3 = document.getElementById("tones")
 const button4 = document.getElementById("tones2")
+const button6 = document.getElementById("main");
+const button7 = document.getElementById("main2");
 const screen = document.getElementById("section1")
 const screen2 = document.getElementById("section2")
 const screen3 = document.getElementById("section3")
@@ -22,4 +24,11 @@ button4.addEventListener("click", () => {
     screen3.style.display = "none";
     screen2.style.display = "block";
 });
-
+button6.addEventListener("click", () => {
+    screen3.style.display = "none";
+    screen.style.display = "block";
+});
+button7.addEventListener("click", () => {
+    screen2.style.display = "none";
+    screen.style.display = "block";
+});

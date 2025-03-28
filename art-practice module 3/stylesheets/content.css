@@ -11,7 +11,7 @@ body{
     height:55vw;
     overflow: hidden;
     background-color: white;
-    display: none;
+    display: block;
     
     
 }
@@ -19,14 +19,14 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.3vw;
     position: absolute;
-    left: 78vw;
+    left: 76vw;
     top: 1.4vw;
     
 }
 .line1{
         height: 18vw;
         width: 0.5vw;
-        /*background-image: repeating-linear-gradient(0deg, transparent, #2690FF, #ffffff);*/
+        background-image: repeating-linear-gradient(0deg, transparent, #2690FF, #ffffff);
         background-color: #2690FF;
         position: absolute;
         top: -8.3vw;
@@ -35,14 +35,14 @@ body{
         transform-origin: left;
     
         background-size: 200% 200%; /* Увеличиваем размер градиента */
-        animation: gradient-animation 1.5s ease infinite; /* Анимация */
+        animation: gradient-animation2 1.5s ease infinite; /* Анимация */
       
 }
 .line2{
     
     height: 23vw;
     width: 0.5vw;
-    /*background-image: linear-gradient(0deg, transparent, #2690FF, #ffffff);*/
+    background-image: linear-gradient(0deg, transparent, #2690FF, #ffffff);
     background-color: #2690FF;
     transform:rotate(-70deg);
     position: absolute;
@@ -56,7 +56,7 @@ body{
   
         height: 32vw;
         width: 0.5vw;
-        /*background-image: linear-gradient(0deg, transparent, #2690FF, #ffffff);*/
+        background-image: linear-gradient(0deg, transparent, #2690FF, #ffffff);
         background-color: #2690FF;
         transform:rotate(-70deg);
         position: absolute;
@@ -71,7 +71,7 @@ body{
   .line4{
     height: 34vw;
     width: 0.5vw;
-    /*background-image: repeating-linear-gradient(0deg, transparent, #2690FF, #ffffff);*/
+    background-image: repeating-linear-gradient(0deg, transparent, #2690FF, #ffffff);
     background-color: #2690FF;
     transform:rotate(-70deg);
     position: absolute;
@@ -100,7 +100,7 @@ body{
 .vertline{
         height: 7vw;
         width: 0.5vw;
-        /*background-image: repeating-linear-gradient(0deg, transparent 1vw, #2690FF, #ffffff);*/
+        background-image: repeating-linear-gradient(0deg, transparent 1vw, #2690FF, #ffffff);
         background-color: #2690FF;
         position: absolute;
         top: 28vw;
@@ -113,6 +113,9 @@ body{
 .spark{
     position: absolute;
     margin-top: 3vw;
+    width: 10vw;
+    height: 9vw;
+    
 }
 
 #beats{
@@ -157,7 +160,7 @@ body{
     width: 0.5vw;
     height: 35vw;
     transform:rotate(-70deg);
-    /*background-image: repeating-linear-gradient(0deg, transparent, #2690FF, #ffffff);*/
+    background-image: repeating-linear-gradient(0deg, transparent, #2690FF, #ffffff);
     background-color:#2690FF;
     position: absolute;
     left: 6.5vw;
@@ -171,7 +174,7 @@ body{
     width: 0.5vw;
     height: 26vw;
     transform:rotate(-70deg);
-    /*background-image: repeating-linear-gradient(0deg, transparent, #ffffff, #2690FF);*/
+    background-image: repeating-linear-gradient(0deg, transparent, #ffffff, #2690FF);
     background-color:#2690FF;
     position: absolute;
     left: 25.5vw;
@@ -185,7 +188,7 @@ body{
     width: 0.5vw;
     height: 40vw;
     transform:rotate(-70deg);
-    /*background-image: repeating-linear-gradient(0deg, transparent, #ffffff, #2690FF);*/
+    background-image: repeating-linear-gradient(0deg, transparent, #ffffff, #2690FF);
     background-color:#2690FF;
     position: absolute;
     left: 60.7vw;
@@ -199,7 +202,7 @@ body{
     width: 0.5vw;
     height: 50vw;
     transform:rotate(-70deg);
-    /*background-image: repeating-linear-gradient(0deg, transparent, #2690FF, #ffffff);*/
+    background-image: repeating-linear-gradient(0deg, transparent, #2690FF, #ffffff);
     background-color:#2690FF;
     position: absolute;
     left: 73vw;
@@ -208,6 +211,10 @@ transform-origin: left;
 
 background-size: 200% 200%; /* Увеличиваем размер градиента */
 animation: gradient-animation2 1.5s ease infinite; /* Анимация */
+}
+@keyframes gradient-animation2 {
+  0% { background-position:  0%; }
+  100% { background-position: 0% 400%; }
 }
 #section2{
   position: absolute;
@@ -382,10 +389,58 @@ animation: gradient-animation2 1.5s ease infinite; /* Анимация */
   background-color: #2690FF;
   border: 2px white solid;
  }
+ #main2{
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5vw;
+  background-color: white;
+  border: 0.2vw black solid;
+  padding-top: 0.7vw;
+  padding-bottom: 0.7vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  border-radius: 5px;
+  margin-left: 87vw;
+  margin-top: 6vw;
+  cursor: pointer;
+}
+#main2:hover{
+  color:#2690FF;
+  border: 0.2vw #2690FF solid;
+}
+.writing{
+  position: relative;
+}
+.star6{
+  position: absolute;
+width: 3vw;
+left: 20vw;
+top: 5vw;
+}
+.star7{
+  position: absolute;
+  top: 20vw;
+  width: 3vw;
+  left: 30vw;
+  top: 40vw;
+}
+.star8{
+  position: absolute;
+  top: 20vw;
+  width: 3vw;
+  left: 50vw;
+  top: 30vw;
+}
+.writ{
+  position: absolute;
+  top: 25vw;
+ left: 15vw;
+ width: 12vw;
+}
 #section3{
   width: 100vw;
     height:55vw;
-    display: block;
+    display: none;
 }
 
 #player{
@@ -431,7 +486,7 @@ animation: gradient-animation2 1.5s ease infinite; /* Анимация */
   cursor: pointer;
 }
 .last{
-  width: 2vw;
+  width: 5vw;
   height: 2vw;
   
 }
@@ -439,7 +494,7 @@ animation: gradient-animation2 1.5s ease infinite; /* Анимация */
 #player2{
   display: flex;
   flex-direction: column;
-  margin-left: 26vw;
+  margin-left: 21vw;
   margin-top: 2.5vw;
 }
 #cover{
@@ -483,6 +538,26 @@ animation: gradient-animation2 1.5s ease infinite; /* Анимация */
   height: 2vw;
   
 }
+#main{
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5vw;
+  background-color: white;
+  border: 0.2vw black solid;
+  padding-top: 0.7vw;
+  padding-bottom: 0.7vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  border-radius: 5px;
+  margin-left: 1vw;
+  margin-top: 10vw;
+  cursor: pointer;
+}
+#main:hover{
+  color:#2690FF;
+  border: 0.2vw #2690FF solid;
+}
+
 #tones2{
   position: absolute;
   font-family: Arial, Helvetica, sans-serif;
@@ -495,7 +570,7 @@ animation: gradient-animation2 1.5s ease infinite; /* Анимация */
   padding-right: 1.5vw;
   border-radius: 20px;
   margin-left: 84vw;
-  margin-top: 4.5vw;
+  margin-top: 3.5vw;
   cursor: pointer;
  
 }
@@ -509,8 +584,66 @@ animation: gradient-animation2 1.5s ease infinite; /* Анимация */
 #play{
   width:2vw;
   background-color: white;
-  border: 1px solid #2690FF;
   margin-left: 10vw;
+}
+.writing2{
+  position: relative;
+}
+.star{
+  position: absolute;
+  width: 2.5vw;
+  left: 16vw;
+  top: 15vw;
+}
+.star:hover{
+  animation: star 2s linear infinite;
+}
+@keyframes star{
+  0% {
+    transform: scale(100%);
+    transform: rotate(200deg);
+}
+25%{
+   
+}
+50% {
+    transform: scale(50%);
+    
+}
+75%{
+    transform: rotate(-90deg);
+}
+100% {
+    transform: scale(90%);
+    transform: rotate(-200deg);
+}
+}
+.star2{
+  position: absolute;
+  width: 2.5vw;
+  left: 25vw;
+  top: 45vw;
+  
+}
+.star3{
+  position: absolute;
+  width: 2.5vw;
+  left: 54vw;
+  top: 23vw;
+}
+.star4{
+  position: absolute;
+  width: 2.5vw;
+  left: 60vw;
+  top: 40vw;
+  
+}
+.star5{
+  position: absolute;
+  width: 2.5vw;
+  left: 67vw;
+  top: 5vw;
+  
 }
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
   html {
