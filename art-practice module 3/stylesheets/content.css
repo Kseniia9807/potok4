@@ -498,3 +498,7 @@ animation: gradient-animation2 1.5s ease infinite; /* Анимация */
   color:#2690FF;
   border: 0.2vw #2690FF solid;
 }
+.snd{
+  background-color: #2690FF;
+}
+

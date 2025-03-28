@@ -4,22 +4,22 @@ for(let i=0; i<8; i++){
     beatmap[i] = [];
     switch(i) {
         case 0:
-            audio = new Audio('./sounds/screen2/a.wav');
+            audio = new Audio('./sounds/screen3/sound1.mp3');
             break;
         case 1:
-            audio = new Audio('./sounds/screen2/f.wav');
+            audio = new Audio('./sounds/screen3/sound2.mp3');
             break;
         case 2:
-            audio = new Audio('./sounds/screen2/f2.wav');
+            audio = new Audio('./sounds/screen3/sound3.mp3');
             break;
         case 3:
-            audio = new Audio('./sounds/screen2/c.wav');
+            audio = new Audio('./sounds/screen3/sound4.mp3');
             break;
         case 4:
-            audio = new Audio('./sounds/screen2/c2.wav');
+            audio = new Audio('./sounds/screen3/sound5.mp3');
             break;
         case 5:
-            audio = new Audio('./sounds/screen2/g.wav');
+            audio = new Audio('./sounds/screen3/sound6.wav');
             break;
         case 6:
             audio = new Audio('./sounds/screen2/g2.wav');
@@ -71,16 +71,12 @@ function playSecond(currentSecond) {
         if (!button.classList.contains("snd")) {
             sound.muted = false;
             sound.play();
-            button.style.backgroundColor = 'red';
+            button.style.backgroundColor = '#0F83FB';
 
-            // Устанавливаем обработчик onended только для воспроизведенных звуков
             sound.onended = function() {
                 button.style.backgroundColor = ''; // Возвращаем исходный цвет после окончания звука
             };
-        } else {
-            sound.muted = true;
-            button.style.backgroundColor = ''; // Или другой цвет для выключенного звука
-        }
+        } 
     }
 }
 
@@ -94,10 +90,6 @@ playButton.addEventListener('click', function() {
   }
 });
 
-
-playButton.addEventListener('click', () =>{
-    alert("open")
-});
 
 
 
